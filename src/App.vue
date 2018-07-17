@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <HelloWorld ok="okok bro" msg="Welcome to Your Vue.js App"/>
+    <h1>{{ message }}</h1>
+
+   </div>
 </template>
 
 <script>
@@ -12,7 +14,18 @@ export default {
   name: 'app',
   components: {
     HelloWorld
-  }
+  },
+  data: () => ({message : "ok super ça marche enfin "}),
+  methods: {
+     copy() {
+
+     },
+     hover() {
+       this.clicked = false;
+     }
+   }
+
+
 }
 </script>
 
